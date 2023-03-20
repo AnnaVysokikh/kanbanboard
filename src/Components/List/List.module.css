@@ -1,0 +1,54 @@
+.list {
+    width: 280px;
+    background: #EBECF0;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    min-height: 100px;
+    align-self: flex-start;
+}
+
+.listTitle {
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.task {
+    background: #fff;
+    margin: 11px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.task:hover {
+	text-decoration: underline;
+}
+
+.taskLink {
+    text-decoration: none;
+}
+
+.addButton {
+    background: none;
+    border: none;
+    appearance: none;
+    font-size: 15px;
+    color: #737373;
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.addButton:hover {
+    background: #fff;
+    border-radius: 5px;
+}

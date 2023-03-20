@@ -1,0 +1,14 @@
+.footer {
+	min-height: 50px;
+	background: #0067A3;
+	color: #fff;
+	font-size: 18px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+	align-items: center;
+}
+
+.taskinfo span {
+	margin-right: 35px;
+}

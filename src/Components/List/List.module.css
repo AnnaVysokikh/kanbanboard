@@ -16,17 +16,46 @@
 
 .listTitle {
     margin-top: 0;
+    margin-bottom: 11px;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
 }
 
+.newTask {
+    overflow: hidden;
+}
+
 .task {
     background: #fff;
     margin: 11px 0;
     padding: 8px;
+    border: 0;
     border-radius: 5px;
+}
+
+.inputName {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 8px 8px;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.select {
+    font-size: 18px; 
+    color: #000; 
+    line-height: 21px; 
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+input:focus:not([type=submit]), textarea:focus {
+    outline: none;
 }
 
 .task:hover {
@@ -35,6 +64,7 @@
 
 .taskLink {
     text-decoration: none;
+    color: #000;
 }
 
 .addButton {
@@ -46,6 +76,23 @@
     margin-top: 5px;
     cursor: pointer;
     padding: 8px;
+}
+
+.submitButton {
+    background: #fff;
+    border: none;
+    appearance: none;
+    font-size: 15px;
+    color: #737373;
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.submitButton:hover {
+    background: #0079BF;
+    color: #fff;
 }
 
 .addButton:hover {

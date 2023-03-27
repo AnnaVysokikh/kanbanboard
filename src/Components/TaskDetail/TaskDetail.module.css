@@ -1,0 +1,45 @@
+.wrapper {
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	margin: 0;
+}
+
+.status {
+	color: #fff;
+	background: #465571;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px 20px;
+	border-radius: 20px;
+}
+
+.label {
+	margin-bottom: 10px;
+}
+
+.emptyState {
+	text-align: center;
+}
+
+.emptyStateIcon {
+	width: 200px;
+}
+
+.buttonClose {
+	background: none;
+	border: none;
+	appearance: none;
+	padding: auto;
+	cursor: pointer;
+	padding-bottom: 25px;
+  }

@@ -3,18 +3,44 @@ import { useParams } from "react-router-dom";
 import Close from "../../assets/close.png";
 import { Link } from "react-router-dom";
 import notFoundIcon from '../../assets/not-found.svg'
+import {useEffect, useState} from "react";
 
 const TaskDetail = (props) => {
 	const params = useParams();
 	const { taskId } = params;
 	const {tasks, setTasks} = props
-	const task = tasks.find((task) => task.id === taskId);
+
+	const [task, setTask] = useState();
+
+    useEffect(() => {
+        if (taskId) {
+            setTask(tasks.find((task) => task.id === taskId))
+        }
+    }, [taskId])
+	
+	const onSave = () => {
+		const updatedTasks = tasks.filter(item => item.id !== taskId)
+		setTasks([...updatedTasks, task])
+	}
 
 	const renderTaskDetails = () => {
 		return (
-			<>
-				<p>Description: {task.description || 'This task has no description'}</p>
-			</>
+			<div className={css.wrapperdescription}>
+				<p>{!task.description && 'This task has no description'}</p>
+				<textarea className={css.description}
+                    onChange={(e) =>
+						setTask({
+							...task,
+							description: e.target.value
+						})}
+                    value={task.description}
+                />
+				<Link to={"/"}>
+					<button className={css.buttonSave} onClick={() => {
+						onSave()
+					}}>Save and close</button>
+				</Link>
+			</div>
 		)
 	}
 

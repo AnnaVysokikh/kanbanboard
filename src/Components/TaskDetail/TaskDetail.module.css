@@ -4,6 +4,10 @@
 	padding: 20px;
 }
 
+.wrapperdescription {
+	display: flex;
+	flex-direction: column;
+}
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -14,14 +18,6 @@
 	margin: 0;
 }
 
-.status {
-	color: #fff;
-	background: #465571;
-	font-weight: bold;
-	margin: 0;
-	padding: 8px 20px;
-	border-radius: 20px;
-}
 
 .label {
 	margin-bottom: 10px;
@@ -42,4 +38,31 @@
 	padding: auto;
 	cursor: pointer;
 	padding-bottom: 25px;
-  }
+}
+
+.description {
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 10px;
+	width: 60%;
+}
+
+.buttonSave {
+    background: #0079BF;
+    border: none;
+    appearance: none;
+    font-size: 15px;
+    color: #737373;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+	width: 130px;
+    color: #fff;
+}
+
+.buttonSave:hover {
+    background: #0067A3;
+
+}

@@ -12,3 +12,9 @@
 .taskinfo span {
 	margin-right: 35px;
 }
+
+@media screen and (max-width: 700px) {
+	.footer {
+		display: none;
+	}
+}

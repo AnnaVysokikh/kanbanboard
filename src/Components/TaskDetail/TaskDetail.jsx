@@ -51,7 +51,7 @@ const TaskDetail = (props) => {
 				<img className={css.emptyStateIcon} src={notFoundIcon} alt='' />
 			</div>
 		)
-	}  
+	}
 
 	return (
 		<div className={css.wrapper}>
@@ -64,8 +64,8 @@ const TaskDetail = (props) => {
 				</Link>
 			</div>
 			{task ? renderTaskDetails() : renderEmptyState()}
-	  </div>
+		</div>
 	);
-  };
-  
-  export default TaskDetail;
+};
+
+export default TaskDetail;

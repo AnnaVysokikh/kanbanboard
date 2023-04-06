@@ -1,11 +1,11 @@
 .board {
 	display: flex;
+	justify-content: space-between;
 }
 
 @media screen and (max-width: 700px) {
 	.board {
-		display: block;
-		margin: 0 auto;
-		width: 280px;
+		width: 320px;
+		display: contents;
 	}
 }

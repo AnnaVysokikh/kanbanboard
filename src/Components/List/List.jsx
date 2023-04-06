@@ -13,6 +13,9 @@ const List = props => {
     const [isMoveVisible, setMoveVisible] = useState(false)
     const [selectedTaskId, setSelectedTaskId] = useState(undefined)
     const hasTasks = tasks.length > 0;
+
+    const checkSpaces = (str) => str.trim() !== '';
+
 	const handleAddNewClick = () => {
 		setAddVisible(!isAddVisible)
 	}
@@ -20,8 +23,7 @@ const List = props => {
         setInputTaskName(e.target.value);
     }
 	const handleSubmitClick = () => {
-		console.log(inputTaskName);
-        if (inputTaskName) {
+        if (inputTaskName && checkSpaces(inputTaskName)) {
             addNewTask(inputTaskName)
             setInputTaskName('');
         }

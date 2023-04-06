@@ -45,7 +45,8 @@
     border-radius: 4px;
     padding: 6px 12px;
     min-height: 10px;
-	width: 60%;
+	width: 80%;
+	resize: none;
 }
 
 .buttonSave {
@@ -65,4 +66,10 @@
 .buttonSave:hover {
     background: #0067A3;
 
+}
+
+@media screen and (max-width: 700px) {
+	.wrapper {
+		width: 320px;
+	}
 }

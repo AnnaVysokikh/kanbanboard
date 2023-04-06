@@ -2,6 +2,7 @@ import uniqid from 'uniqid'
 import css from './Board.module.css'
 import { LIST_TYPES, LIST_COPY} from '../../config'
 import List from '../List/List'
+import { useCallback } from 'react'
 
 const Board = (props) => {
 	const {tasks, setTasks} = props
@@ -12,7 +13,6 @@ const Board = (props) => {
 			description,
 			status: 'backlog', 
 		}
-
 		setTasks([...tasks, task]);
 	}
 
@@ -38,16 +38,17 @@ const Board = (props) => {
 		}
 	}
 
-	const checkStatus = (status) => {
+	const checkStatus = useCallback((status) => {
+		console.log("checkStatus")
 		return tasks.filter((task) => task.status === getStatus(status)).length === 0 ? false : true
-	}
+	}, [tasks])
 
 	const getTasksByState = (status) => {
 		var options = [];
 		var newTask = [];
 		newTask = tasks.filter((task) => task.status === getStatus(status))
 		newTask.forEach(t => {options.push({value: t.id, label:t.title})})
-
+		console.log("getTasksByState")
 		return options
 	}
 

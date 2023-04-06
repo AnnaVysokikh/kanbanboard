@@ -1,5 +1,5 @@
 .list {
-    width: 280px;
+    width: 25%;
     background: #EBECF0;
     border-radius: 10px;
     padding: 20px;
@@ -33,6 +33,7 @@
     padding: 8px;
     border: 0;
     border-radius: 5px;
+    word-wrap: break-word;
 }
 
 .inputName {
@@ -44,6 +45,7 @@
     width: 100%;
     font-size: 18px;
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .select {
@@ -52,6 +54,7 @@
     line-height: 21px; 
     border-radius: 5px;
     background-color: #fff;
+    word-wrap: break-word;
 }
 
 input:focus:not([type=submit]), textarea:focus {
@@ -98,4 +101,10 @@ input:focus:not([type=submit]), textarea:focus {
 .addButton:hover {
     background: #fff;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    .list {
+        width: 320px;
+    }
 }
